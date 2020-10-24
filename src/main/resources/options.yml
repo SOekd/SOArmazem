@@ -1,0 +1,75 @@
+#
+# Funções disponiveis:
+# trust -> Irá permitir/negar um jogador jogador com TRUST mexer no armazem.
+# member -> Irá permitir/negar um jogador jogador com MEMBER mexer no armazem.
+# warn -> Irá ativar/desativar a notificação de que o bau está cheio para o jogador.
+# return -> Irá voltar para o menu principal do armazem
+# null -> Não irá fazer nada, o item será decorativo.
+#
+# PlaceHolders disponiveis:
+# {plot} -> Mostrará o ID do terreno.
+# {owner} -> Mostrará o dono do terreno.
+# {cactus} -> Mostrará a quantidade de cactos dentro do armazem.
+# {hopper} -> Mostrará a quantidade de funis dentro do armazem.
+# {space} -> Mostrara quanto de espaço tem no armazem.
+# {trusted} -> Mostrará se membros com TRUST no terreno tem permissão no armazem.
+# {member} -> Mostrará se membros com ADD no terreno tem permissão no armazem.
+# {warn} -> Mostrará se está ativo o sistema para avisar que está cheio o armazem.
+# {selltimes} -> Mostrará a quantidade de vezes que o jogaor ainda pode usar a venda.
+# {timetoreset} -> Mostrará quanto tempo (segundos) falta para resetar o tempo de venda.
+# {cactusmoney} -> Mostrará quanto dinheiro tem em cactos.
+#
+# CUIDADO: Se o nome do inventário for muito grande, o comando não irá funcionar.
+#
+# Para colocar os sons, caso use o spigot 1.8, coloque sons da 1.8.
+# Caso use spigot 1.12+, coloque sons da 1.12+
+# Lista de sons na 1.12: https://helpch.at/docs/1.12.2/org/bukkit/Sound.html
+# Lista de sons na 1.8: https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+InventoryConfig:
+  Size: 27
+  Name: '&6&lOpções &e- &6{plot}'
+  ClickSound: NOTE_STICKS
+  ReturnSound: NOTE_STICKS
+Inventory:
+  12: # Slot que o item será colocado.
+    ID: 397
+    Data: 0 # Data seria o que vem depos dos : no ID completo do item. Caso não tenha nada, deixe 0.
+    Function: 'trust'
+    Name: ' '
+    Lore:
+      - ' '
+      - '&6» &ePermitir/Negar confiaveis de abrir o armazem.'
+      - ' '
+      - '&6» &eStatus: &7{trusted}&e.'
+      - ' '
+  13:
+    ID: 339
+    Data: 0
+    Function: 'warn'
+    Name: ' '
+    Lore:
+      - ' '
+      - '&6» &eLigar/Desligar o aviso do armazem lotado.'
+      - ' '
+      - '&6» &eStatus: &7{warn}&e.'
+      - ' '
+  14:
+    ID: 397
+    Data: 1
+    Function: 'member'
+    Name: ' '
+    Lore:
+      - ' '
+      - '&6» &ePermitir/Negar membros de abrir o armazem.'
+      - ' '
+      - '&6» &eStatus: &7{member}&e.'
+      - ' '
+  18:
+    ID: 262
+    Data: 0
+    Function: 'return'
+    Name: ' '
+    Lore:
+      - ' '
+      - '&6» &eClique aqui para retornar ao armazem.'
+      - ' '

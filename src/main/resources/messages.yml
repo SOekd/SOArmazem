@@ -1,0 +1,43 @@
+# Todas as mensagens são 100% editaveis!
+#
+# Armazem:
+OpenStorage: '{prefix} &aVocê abriu o armazem do terreno.'
+StorageFull: '{prefix} &cO armazem do terreno &7{plot} &cestá cheio.'
+PickupCactus: '{prefix} &aVocê pegou &7{amount} &acactos do armazem.'
+SellCactus: '{prefix} &aVocê conseguiu &7{money} &avendendo os cactos.'
+AddHoppers: '{prefix} &aVocê adicionou {amount} funis ao seu armazem'
+
+# ArmazemAdmin:
+SetCactus: '{prefix} &cVocê setou &7{amount} cactos &cno terreno &7{plot}&c.'
+ResetPlot: '{prefix} &cVocê resetou o terreno &7{plot}&c!'
+SetHopper: '{prefix} &cVocê setou &7{amount} funis &cno terreno &7{plot}&c.'
+Reload: '{prefix} &aVocê recarregou as configurações com sucesso.'
+Help:
+  - ' '
+  - '{prefix} &e/armazemadmin setcactos &7- &eSete a quantidade de cactos.'
+  - '{prefix} &e/armazemadmin setfunis &7- &eSete a quantidade de funis.'
+  - '{prefix} &e/armazemadmin resetar &7- &eResete o terreno.'
+  - '{prefix} &e/armazemadmin reload &7- &eRecarregue as configurações.'
+  - ' '
+
+# Erros:
+NoConsole: '{prefix} &cSomente jogadores podem executar este comando.'
+NoPermission: '{prefix} &cVocê não tem permissão para executar este comando.'
+NoPlot: '{prefix} &cVocê não está em um terreno.'
+NoOwner: '{prefix} &cO terreno onde você está não tem nenhum dono.'
+NoInPlotWorld: '"{prefix} &cVocê não está no mundo dos terrenos."'
+NoPermissionPlot: '{prefix} &cVocê não tem permissão para mexer neste terreno.'
+OnlyOwner: '{prefix} &cSomente o dono do terreno pode configurar o armazem.'
+NoPermPickup: '{prefix} &cVocê não tem permissão para pegar os cactos do armazem.'
+NoCactus: '{prefix} &cVocê não tem nenhum cacto no seu armazem.'
+InventoryFull: '{prefix} &cNão foi possível adicionar nenhum cacto ao seu inventário pois o mesmo está cheio.'
+SellResetTimeMinutes: '{prefix} &cFalta &7{minutes} e &7{seconds} &cpara resetar seus usos de venda remota.'
+SellResetTimeSeconds: '{prefix} &cFalta &7{seconds} &cpara resetar seus usos de venda remota.'
+NoPermSell: '{prefix} &cVocê não tem permissão para vender os cactos do armazem.'
+NoPermAddHopper: '{prefix} &cVocê não tem permissão para adicionar funis nesse terreno.'
+NoHopperInv: '{prefix} &cVocê não tem nenhum funil no seu inventário.'
+ErrorNumberFormat: '{prefix} &cA quantidade específicada é inválida.'
+IncorrectSetHopper: '{prefix} &cComando incorreto! Use /armazemadmin setfunis (quantidade).'
+IncorrectSetCactus: '{prefix} &cComando incorreto! Use /armazemadmin setcactos (quantidade).'
+
+

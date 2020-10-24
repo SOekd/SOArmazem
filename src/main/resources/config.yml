@@ -1,0 +1,79 @@
+# Autor: SOekd
+# Discord: SOekd#3055 (Use para reportar BUGS ou dar sugestões de melhorias)
+# Codigo: https://github.com/SOekd/SOArmazem
+
+# Permissões:
+# soarmazem.admin
+# soarmazem.sell
+# soarmazem.sell.<porcentagem a mais>
+
+MySQL:
+  Enable: false
+  Host: localhost
+  Port: 3306
+  Database: SOPlugins
+  Username: 'Username'
+  Password: 'Password'
+  AdvancedConfiguration: # Configurações da HikariCP. Caso não saiba mexer em connection pool, não mude nada (pode acabar comprometendo a performace).
+    PoolName: 'SOArmazemPool'
+    CachePrepStmts: true
+    PrepStmtCacheSize: 250
+    PrepStmtCacheSqlLimit: 2048
+    UseServerPrepStmts: true
+    UseLocalSessionState: true
+    RewriteBatchedStatements: true
+    CacheResultSetMetadata: true
+    CacheServerConfiguration: true
+    ElideSetAutoCommits: true
+    MaintainTimeStats: false
+
+Prefix: '&6&lArmazem  &e'
+PlotWorld: PlotWorld # Coloque o nome do mundo das plots!
+
+# Caso ativo, irá limpar o inventário sempre que derem clear, dispose no terreno.
+ClearWhenDispose: true
+
+# Caso o jogador ative a opção de avisar quando o armazem está cheio, a cada quantos segundos irá avisar.
+WarnTime: 2400
+
+Time:
+  Second: '{second} segundo'
+  Seconds: '{second} segundos'
+  Minute: '{minute} minuto'
+  Minutes: '{minute} minutos'
+
+Options:
+  Trust:
+    Allowed: '&aPERMITIDO'
+    Denied: '&cNEGADO'
+  Member:
+    Allowed: '&aPERMITIDO'
+    Denied: '&cNEGADO'
+  Warn:
+    Allowed: '&aAVISAR'
+    Denied: '&cNÃO AVISAR'
+
+# Se estiver ativo, quando o jogador dropar o cacto ele não irá para o armazem.
+BlockPlayerDrop: true
+
+# AVISO: Caso o servidor reinicie a quantidade que o jogador pode vender também serão resetados ao padrão.
+SellConfigurations:
+  AllowedTimes: 5 # Quantas vezes o jogador pode usar o sistema de venda em um certo periodo de tempo. (O sistema é por terreno)
+  ResetTime: 3000 # Após passar esse tempo, será resetado as vezes que o jogador pode vender. (em segundos)
+  UnitPrice: 60.0 # Preço unitário dos cactos
+
+# Caso ativo, só irá dropar os cactos no terreno caso o dono do mesmo estiver online no servidor.
+DropOwnerOnline: true
+
+SaveConfiguration:
+  Time: 60 # A cada quanto tempo irá salvar as configurações (em minutos)
+  Message: '&6&lSOArmazem  &eForam salvos &7{amount} &6terrenos no banco de dados.' # Essa mensagem é mandada no console.
+
+StorageConfiguration:
+  Hopper:
+    DefaultSpaceAmount: 3000 # Espaço padrão que irá ter quando não tiver nenhum funil.
+    SpacePerHopper: 64 # Quanto de espaço a mais irá dar a cada funil que a pessoa colocar.
+
+
+
+

@@ -1,0 +1,96 @@
+#
+# Funções disponiveis:
+# pickup -> Irá pegar todos os cactos quando clickar.
+# addhopper -> Irá adicionar funil ao clickar (botao esquerdo adiciona um, botão direito adiciona todos).
+# options -> Irá abrir o inventário das opções para configurar o armazem.
+# null -> Não irá fazer nada, o item será decorativo.
+#
+# PlaceHolders disponiveis:
+# {plot} -> Mostrará o ID do terreno.
+# {owner} -> Mostrará o dono do terreno.
+# {cactus} -> Mostrará a quantidade de cactos dentro do armazem.
+# {hopper} -> Mostrará a quantidade de funis dentro do armazem.
+# {space} -> Mostrara quanto de espaço tem no armazem.
+# {trusted} -> Mostrará se membros com TRUST no terreno tem permissão no armazem.
+# {member} -> Mostrará se membros com ADD no terreno tem permissão no armazem.
+# {warn} -> Mostrará se está ativo o sistema para avisar que está cheio o armazem.
+# {selltimes} -> Mostrará a quantidade de vezes que o jogaor ainda pode usar a venda.
+# {timetoreset} -> Mostrará quanto tempo (segundos) falta para resetar o tempo de venda.
+# {cactusmoney} -> Mostrará quanto dinheiro tem em cactos.
+#
+# CUIDADO: Se o nome do inventário for muito grande, o comando não irá funcionar.
+#
+# Para colocar os sons, caso use o spigot 1.8, coloque sons da 1.8.
+# Caso use spigot 1.12+, coloque sons da 1.12+
+# Lista de sons na 1.12: https://helpch.at/docs/1.12.2/org/bukkit/Sound.html
+# Lista de sons na 1.8: https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+InventoryConfig:
+  Size: 36
+  Name: '&6&lArmazem &e- &6{plot}'
+  OpenSound: CHEST_OPEN
+  ErrorSound: ANVIL_LAND
+  PickupSound: LEVEL_UP
+  AddHopperSound: LEVEL_UP
+  OpenOptionsSound: NOTE_STICKS
+Inventory:
+  2: # Slot que o item será colocado.
+    ID: 340
+    Data: 0 # Data seria o que vem depos dos : no ID completo do item. Caso não tenha nada, deixe 0.
+    Function: 'null'
+    Name: '&6Informações Gerais'
+    Lore:
+      - ' '
+      - '&6» &eDono: &7{owner}&e.'
+      - '&6» &eCactos: &7{cactus}&e.'
+      - '&6» &eFunis: &7{hopper}&e.'
+      - '&6» &eEspaço: &7{space}&e.'
+      - ' '
+  6:
+    ID: 386
+    Data: 0
+    Function: 'options'
+    Name: '&6Configurações'
+    Lore:
+      - ' '
+      - '&6» &eConfiaveis: &7{trusted}&e.'
+      - '&6» &eMembros: &7{member}&e.'
+      - '&6» &eAvisar quando cheio: &7{warn}&e.'
+      - '&6» &eClique aqui para pegar seus cactos.'
+      - ' '
+      - '&6» &eCaso queira modificar, clique aqui.'
+      - ' '
+  19:
+    ID: 81
+    Data: 0
+    Function: 'pickup'
+    Name: '&cPegue seus cactos clicando aqui.'
+    Lore:
+      - ' '
+      - '&6» &eAtualmente há &7{cactus} cactos&e.'
+      - ' '
+      - '&6» &eClique aqui para pegar seus cactos.'
+      - ' '
+  22:
+    ID: 323
+    Data: 0
+    Function: 'sell'
+    Name: '&cVenda seus cactos clicando aqui.'
+    Lore:
+      - ' '
+      - '&6» &eVocê tem &7{cactusmoney} &eem cactos.'
+      - ' '
+      - '&6» &eUsos restantes: &7{selltimes}&e.'
+      - ' '
+  25:
+    ID: 154
+    Data: 0
+    Function: 'addhopper'
+    Name: '&cAdicione funis clicando aqui.'
+    Lore:
+      - ' '
+      - '&6» &eVocê tem &7{hopper} &efunis.'
+      - '&6» &eO espaço total do seu armazem é de &7{space}&e.'
+      - ' '
+      - '&6» &eBotão esquerdo: Adicione &7UM &efunil.'
+      - '&6» &eBotão direito: Adicione &7TODOS &efunis do inventário.'
+      - ' '

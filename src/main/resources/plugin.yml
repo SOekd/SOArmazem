@@ -1,0 +1,13 @@
+name: SOArmazem
+version: 2.0
+main: me.soekd.soarmazem.Main
+depend: [PlotSquared,Vault]
+author: SOekd
+website: https://github.com/SOekd
+commands:
+  storage:
+    aliases: [armazem]
+    description: Abra o armazem do seu terreno
+  storageadmin:
+    aliases: [armazemadmin]
+    description: Altere as configuracoes do terreno
