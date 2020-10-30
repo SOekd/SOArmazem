@@ -90,6 +90,7 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new PlayerDropCactus(), this);
         pm.registerEvents(new PlotClear(), this);
         pm.registerEvents(new PlotLeave(), this);
+        pm.registerEvents(new Update(), this);
         cs.sendMessage("§6§lSOArmazem  §aOs eventos foram registrados com sucesso.");
     }
 

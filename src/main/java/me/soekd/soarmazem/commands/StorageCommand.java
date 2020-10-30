@@ -37,11 +37,11 @@ public class StorageCommand implements CommandExecutor {
                 player.sendMessage(Messages.getSimpleMessage("NoInPlotWorld"));
                 return false;
             }
+            if(!Main.storageList.containsKey(plot)) Main.storageList.put(plot, SQLManager.getStorage(plot));
             if (!Check.hasPermission(player, plot)) {
                 player.sendMessage(Messages.getSimpleMessage("NoPermissionPlot"));
                 return false;
             }
-            if(!Main.storageList.containsKey(plot)) Main.storageList.put(plot, SQLManager.getStorage(plot));
             ResetSellTimes.checkPlot(plot);
             StorageInventory.openInventory(player, plot);
             player.sendMessage(Messages.getSimpleMessage("OpenStorage"));

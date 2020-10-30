@@ -12,8 +12,8 @@ public class Messages {
 
     public static Config messagesConfig = new Config("messages.yml");
 
-    private static HashMap<String, String> simpleMessage = new HashMap<>();
-    private static HashMap<String, List<String>> multiMessage = new HashMap<>();
+    private static final HashMap<String, String> simpleMessage = new HashMap<>();
+    private static final HashMap<String, List<String>> multiMessage = new HashMap<>();
 
     public static void loadSimpleMessages() {
         simpleMessage.clear();

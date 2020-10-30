@@ -1,5 +1,5 @@
 name: SOArmazem
-version: 2.0
+version: ${project.version}
 main: me.soekd.soarmazem.Main
 depend: [PlotSquared,Vault]
 author: SOekd
