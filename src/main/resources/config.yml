@@ -19,6 +19,7 @@ MySQL:
     CachePrepStmts: true
     PrepStmtCacheSize: 250
     PrepStmtCacheSqlLimit: 2048
+    LeakDetectionThreshold: 60000
     UseServerPrepStmts: true
     UseLocalSessionState: true
     RewriteBatchedStatements: true

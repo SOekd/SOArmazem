@@ -33,6 +33,7 @@ public class SQLConnection {
             config.setUsername(username);
             config.setPassword(password);
             config.setDriverClassName("com.mysql.jdbc.Driver");
+            config.setLeakDetectionThreshold(Main.getInstance().getConfig().getInt("MySQL.AdvancedConfiguration.LeakDetectionThreshold"));
             config.addDataSourceProperty("cachePrepStmts", Main.getInstance().getConfig().getBoolean("MySQL.AdvancedConfiguration.CachePrepStmts"));
             config.addDataSourceProperty("prepStmtCacheSize", Main.getInstance().getConfig().getInt("MySQL.AdvancedConfiguration.PrepStmtCacheSize"));
             config.addDataSourceProperty("prepStmtCacheSqlLimit", Main.getInstance().getConfig().getInt("MySQL.AdvancedConfiguration.PrepStmtCacheSqlLimit"));

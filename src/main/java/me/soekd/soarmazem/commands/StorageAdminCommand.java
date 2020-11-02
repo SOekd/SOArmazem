@@ -111,6 +111,7 @@ public class StorageAdminCommand implements CommandExecutor {
                     ResetSellTimes.timeReset.remove(plot);
                     WarnSystem.plotToWarn.remove(plot);
                     Main.storageList.remove(plot);
+                    if(!Main.storageList.containsKey(plot)) Main.storageList.put(plot, SQLManager.getStorage(plot));
                     player.sendMessage(Messages.getSimpleMessage("ResetPlot", plot));
                     return true;
                 }

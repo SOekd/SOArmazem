@@ -4,6 +4,7 @@ import com.intellectualcrafters.plot.api.PlotAPI;
 import com.intellectualcrafters.plot.object.Plot;
 import me.soekd.soarmazem.Main;
 import me.soekd.soarmazem.database.SQLManager;
+import me.soekd.soarmazem.system.CactusSystem;
 import me.soekd.soarmazem.tasks.WarnSystem;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
@@ -21,6 +22,7 @@ public class ItemSpawn implements Listener {
             if(plot == null) return;
             if(!plot.hasOwner()) return;
             if(!Main.storageList.containsKey(plot)) Main.storageList.put(plot, SQLManager.getStorage(plot));
+            if(!CactusSystem.getOwner(plot).isOnline()) if(Main.getInstance().getConfig().getBoolean("DropOwnerOnline")) return;
             if(Main.storageList.get(plot).isFull()){
                 if(Main.storageList.get(plot).isWarnWhenFull()) WarnSystem.startWarn(plot);
                 return;
